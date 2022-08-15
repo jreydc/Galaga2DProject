@@ -4,19 +4,25 @@ using UnityEngine;
 
 public class Singleton<T> : MonoBehaviour where T : Singleton<T>
 {
-   public static T _SingleInstance;//Singleton instance for access
+    private static T _instance;
+    public static T _SingleInstance{ 
+        get { return _instance; }
+        private set{}
+    }
 
-    protected virtual void Awake()//for Base method overriding access to a Singleton Classes
+    protected virtual void Awake()
     {
-        if(_SingleInstance == null){
-           Debug.Log(typeof(T).ToString() + " is NULL.");
-           _SingleInstance = this as T;
-            DontDestroyOnLoad(transform.root.gameObject);
+        if (_instance == null)
+        {
+            Debug.Log(typeof(T).ToString() + " is NULL.");
+            _instance = this as T;
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
             Destroy(gameObject);
             Debug.Log(typeof(T).ToString() + " has tried to instantiate again!");
         }
+
     }
 }

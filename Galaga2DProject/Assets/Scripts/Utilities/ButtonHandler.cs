@@ -9,12 +9,8 @@ public class ButtonHandler : MonoBehaviour
     void Start()
     {
         playButton = GetComponent<Button>();
-        playButton.onClick.AddListener(delegate {LoadLevel("GamePlayScene");
+        playButton.onClick.AddListener( delegate {
+            SceneController._SingleInstance.LoadLevel("GamePlayScene");
         });
-    }
-
-    public void LoadLevel(string levelName)
-    {
-        SceneManager.LoadSceneAsync(levelName, LoadSceneMode.Single);
     }
 }
