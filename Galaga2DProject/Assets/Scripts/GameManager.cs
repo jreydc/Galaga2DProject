@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class GameManager : MonoBehaviour
+public class GameManager : Singleton<GameManager>
 {
 
-    #region GameManager GetInstantiation
+    #region GameManager Persistent Instantiation
     private static GameManager instance;
     public static GameManager GetInstance(){
         return instance;
     }
-    protected void Awake() {
+    protected override void Awake() {
         if (instance == null){
             instance = this;
             DontDestroyOnLoad(instance.gameObject);
