@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-
+[RequireComponent(typeof(Animator))]
 public class UnitAnimator : MonoBehaviour
 {
     const string PLAYER_IDLE = "Idle";

@@ -14,4 +14,6 @@ public class SceneController : Singleton<SceneController>
     {
         SceneManager.UnloadSceneAsync(levelName, UnloadSceneOptions.None);
     }
+
+    
 }
