@@ -16,7 +16,7 @@ public class UnitAnimator : MonoBehaviour
 
     private void Awake() {
         anime2r = GetComponent<Animator>();
-        //isAttacking = false;
+        isAttacking = false;
     }
 
     public void ChangeAnimationState(string newState){
@@ -38,7 +38,7 @@ public class UnitAnimator : MonoBehaviour
 
         ChangeAnimationState(PLAYER_MOVING);
         attackDelay = anime2r.GetCurrentAnimatorStateInfo(0).length;
-        Invoke("AttackComplete2Idle", attackDelay);
+        //Invoke("AttackComplete2Idle", attackDelay);
     }
 
     

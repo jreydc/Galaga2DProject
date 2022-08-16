@@ -1,4 +1,6 @@
-﻿public abstract class Unit 
+﻿using UnityEngine;
+
+public class Unit : MonoBehaviour 
 {
     public float maxHealthPoints;
     public float currentHealthPoints;
