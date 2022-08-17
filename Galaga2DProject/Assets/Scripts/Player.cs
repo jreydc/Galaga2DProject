@@ -24,12 +24,15 @@ public class Player : Unit
     // Start is called before the first frame update
     void Start()
     {
-        
+        rgBody2D = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     private void Update()
     {
+        /* float moveX = Input.GetAxis("Horizontal");
+        float moveY = Input.GetAxis("Vertical");
+        moveDirection = new Vector2(moveX, moveY).normalized; */
         moveDirection = playerMovement.ReadValue<Vector2>();
     }
 
