@@ -3,11 +3,10 @@
 public class UnitAnimator : MonoBehaviour
 {
     const string PLAYER_IDLE = "Idle";
-    const string PLAYER_ATTACK = "Attack";
     const string PLAYER_MOVING = "Moving";
+    const string PLAYER_ATTACK = "Attack";
     
-    private float xAxis;
-    private float yAxis;
+
     private float attackDelay = 0.3f;
 
     private Animator anime2r;
@@ -37,7 +36,6 @@ public class UnitAnimator : MonoBehaviour
         attackDelay = anime2r.GetCurrentAnimatorStateInfo(0).length;
         //Invoke("AttackComplete2Idle", attackDelay);
     }
-
     
     public void PlayerIdle(){
         ChangeAnimationState(PLAYER_IDLE);

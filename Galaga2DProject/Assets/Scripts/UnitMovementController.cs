@@ -7,9 +7,7 @@ public class UnitMovementController : MonoBehaviour
     private Rigidbody2D rgBody2D;
     [SerializeField]private InputAction playerMovement;
     [SerializeField]private float moveSpeed;
-    private Vector2 moveDirection = Vector2.zero;
-    private UnitAnimator unitAnim82r;
-    private InputAction.CallbackContext context;
+    private Vector2 moveDirection = Vector2.zero;   
 
     private bool isMoving;
     public bool IsMoving{

@@ -121,6 +121,50 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &941640258
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 941640259}
+  - component: {fileID: 941640260}
+  m_Layer: 0
+  m_Name: BattleSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &941640259
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941640258}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &941640260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941640258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 797af17623c29b649ae81eb7f9a01066, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxPosition: 2
 --- !u!1 &1191696898
 GameObject:
   m_ObjectHideFlags: 0
@@ -237,7 +281,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4803365131872970, guid: 2ce1fb9d977e03b49a1ce0113faf945e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4803365131872970, guid: 2ce1fb9d977e03b49a1ce0113faf945e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -295,9 +339,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 318df9c9da81fce4996c9568ce283715, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealthPoints: 0
+  maxHealthPoints: 100
   currentHealthPoints: 0
-  maxLifePoints: 0
+  maxLifePoints: 3
   currentLifePoints: 0
   skills: 
 --- !u!50 &1314104595
@@ -339,7 +383,7 @@ MonoBehaviour:
     m_ExpectedControlType: 
     m_Id: f92e95b5-ede1-4d9a-88cb-47f761f96cc7
     m_Processors: 
-    m_Interactions: 
+    m_Interactions: Press
     m_SingletonActionBindings:
     - m_Name: KeyboardInputs
       m_Id: 9b16b862-eaeb-4638-9bfd-25b650c2164b
@@ -457,6 +501,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1398585566}
   m_CullTransparentMesh: 0
+--- !u!1 &1598349276
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1598349277}
+  - component: {fileID: 1598349278}
+  m_Layer: 0
+  m_Name: ObjectPooler4Invaders
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1598349277
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1598349276}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1598349278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1598349276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66840ac5f75e033448a15b8642168045, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pools:
+  - tag: Invaders
+    prefab: {fileID: 1512782934554904, guid: 401d8aca9e846254890399f66cd7de66, type: 3}
+    size: 2
+  - tag: Enemy
+    prefab: {fileID: 1512782934554904, guid: 401d8aca9e846254890399f66cd7de66, type: 3}
+    size: 5
 --- !u!1 &2088083803
 GameObject:
   m_ObjectHideFlags: 0
