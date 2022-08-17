@@ -300,56 +300,6 @@ MonoBehaviour:
   maxLifePoints: 0
   currentLifePoints: 0
   skills: 
-  playerMovement:
-    m_Name: Player Movement
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 3039286d-8cc0-47f5-8f62-cc50c3ca4d8e
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: KeyBoardControls
-      m_Id: 02fa9ce2-5a16-4777-a261-08214e3d1ca0
-      m_Path: 2DVector
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Player Movement
-      m_Flags: 4
-    - m_Name: up
-      m_Id: 8345e185-0662-45e3-bf1c-bf6da5847dd1
-      m_Path: <Keyboard>/w
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Player Movement
-      m_Flags: 8
-    - m_Name: down
-      m_Id: 82f21d2c-bcb3-49a8-99c7-e7d527183e3b
-      m_Path: <Keyboard>/s
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Player Movement
-      m_Flags: 8
-    - m_Name: left
-      m_Id: 897724e2-a6c2-40dd-9512-df596db217ab
-      m_Path: <Keyboard>/a
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Player Movement
-      m_Flags: 8
-    - m_Name: right
-      m_Id: 375e41b0-0725-4096-bf78-a5d0d8802bc5
-      m_Path: <Keyboard>/d
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Player Movement
-      m_Flags: 8
-    m_Flags: 0
-  moveSpeed: 3
 --- !u!50 &1314104595
 Rigidbody2D:
   serializedVersion: 4
@@ -371,6 +321,68 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1314104598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1314104593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f76e6ceda900bb44a1e106f64c705ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerMovement:
+    m_Name: Player Movement
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: f92e95b5-ede1-4d9a-88cb-47f761f96cc7
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: KeyboardInputs
+      m_Id: 9b16b862-eaeb-4638-9bfd-25b650c2164b
+      m_Path: 2DVector
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Movement
+      m_Flags: 4
+    - m_Name: up
+      m_Id: f1ca2816-3fad-46bd-b19a-f7c5cc4b6cd5
+      m_Path: <Keyboard>/w
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Movement
+      m_Flags: 8
+    - m_Name: down
+      m_Id: 0664440d-9319-4e0c-a304-5bcdbf1af973
+      m_Path: <Keyboard>/s
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Movement
+      m_Flags: 8
+    - m_Name: left
+      m_Id: 5a7d833a-3d5d-4f0e-9718-53a14df04a4d
+      m_Path: <Keyboard>/a
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Movement
+      m_Flags: 8
+    - m_Name: right
+      m_Id: e72d287d-5ada-48c1-9787-4a5ba48253eb
+      m_Path: <Keyboard>/d
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Movement
+      m_Flags: 8
+    m_Flags: 0
+  moveSpeed: 3
 --- !u!1 &1398585566
 GameObject:
   m_ObjectHideFlags: 0

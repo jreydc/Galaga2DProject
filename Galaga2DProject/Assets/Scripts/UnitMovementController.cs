@@ -1,18 +1,32 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.InputSystem;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class UnitMovementController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    private Rigidbody2D rgBody2D;
+    [SerializeField]private InputAction playerMovement;
+    [SerializeField]private float moveSpeed;
+
+    private Vector2 moveDirection = Vector2.zero;
+    
+    private void OnEnable() {
+        playerMovement.Enable();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    private void OnDisable() {
+        playerMovement.Disable();
+    }
+
+    private void Awake() {
+        rgBody2D = GetComponent<Rigidbody2D>();    
+    }
+
+    public void MovementDirectionReadValues(){
+        moveDirection = playerMovement.ReadValue<Vector2>();
+    }
+
+    public void Rigidbody2DToMovement(){
+        rgBody2D.velocity = new Vector2(moveDirection .x * moveSpeed, moveDirection.y * moveSpeed);
     }
 }
