@@ -16,7 +16,6 @@ public class ObjectPooler : Singleton<ObjectPooler>
     //public Dictionary<string, Queue<GameObject>> poolDictionary => new Dictionary<string, Queue<GameObject>>();
     private Queue<GameObject> collectionOfPools = new Queue<GameObject>();
 
-    // Start is called before the first frame update
     public void FillThePoolCollection()
     {
         foreach (Pool pool in pools)
@@ -31,7 +30,7 @@ public class ObjectPooler : Singleton<ObjectPooler>
         }
     }
 
-    public GameObject SpawnFromPool(string tag, Vector3 position, Quaternion rotation)
+    public GameObject SpawnFromPool(Vector3 position, Quaternion rotation)
     {
         if (collectionOfPools.Count > 0){
             GameObject objectToSpawn = collectionOfPools.Dequeue();
