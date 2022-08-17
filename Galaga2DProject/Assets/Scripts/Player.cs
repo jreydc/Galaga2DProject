@@ -7,10 +7,7 @@ public class Player : Unit
 {
     private UnitAnimator unitAnim82r;
     private UnitMovementController unitMovementController;
-    
-    
-    
-    // Start is called before the first frame update
+
     void Start()
     {
         unitMovementController = GetComponent<UnitMovementController>();
