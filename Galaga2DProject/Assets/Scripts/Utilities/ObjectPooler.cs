@@ -13,50 +13,38 @@ public class ObjectPooler : Singleton<ObjectPooler>
     }
 
     public List<Pool> pools;
-    public Dictionary<string, Queue<GameObject>> poolDictionary;
+    //public Dictionary<string, Queue<GameObject>> poolDictionary => new Dictionary<string, Queue<GameObject>>();
+    private Queue<GameObject> collectionOfPools = new Queue<GameObject>();
 
     // Start is called before the first frame update
-    void Start()
+    public void FillThePoolCollection()
     {
-        poolDictionary = new Dictionary<string, Queue<GameObject>>();
-
         foreach (Pool pool in pools)
         {
-            Queue<GameObject> objectPool = new Queue<GameObject>();
-
             for (int i = 0; i < pool.size; i++)
             {
                 GameObject obj = Instantiate(pool.prefab);
                 obj.SetActive(false);
-                objectPool.Enqueue(obj); 
+                collectionOfPools.Enqueue(obj); 
             }
 
-            poolDictionary.Add(pool.tag, objectPool);
         }
     }
 
     public GameObject SpawnFromPool(string tag, Vector3 position, Quaternion rotation)
     {
-        if (!poolDictionary.ContainsKey(tag))
-        {
-            Debug.LogWarning("Pool doesn't exist - " + tag);
-            return null;
+        if (collectionOfPools.Count > 0){
+            GameObject objectToSpawn = collectionOfPools.Dequeue();
+            objectToSpawn.transform.position = position;
+            objectToSpawn.transform.rotation = rotation;
+            objectToSpawn.SetActive(true);
+            return objectToSpawn;
         }
+        return null;
+    }
 
-        GameObject objectToSpawn = poolDictionary[tag].Dequeue();
-
-        objectToSpawn.SetActive(true);
-        objectToSpawn.transform.position = position;
-        objectToSpawn.transform.rotation = rotation;
-
-        poolDictionary[tag].Enqueue(objectToSpawn);
-
-        IPooledObject pooledObj = objectToSpawn.GetComponent<IPooledObject>();
-        if (pooledObj != null)
-        {
-            pooledObj.OnObjectSpawn();
-        }
-
-        return objectToSpawn;
+    public void ReturnToPool(GameObject obj){
+        collectionOfPools.Enqueue(obj);
+        obj.SetActive(false);
     }
 }
