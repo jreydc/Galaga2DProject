@@ -7,9 +7,15 @@ public class UnitMovementController : MonoBehaviour
     private Rigidbody2D rgBody2D;
     [SerializeField]private InputAction playerMovement;
     [SerializeField]private float moveSpeed;
-
     private Vector2 moveDirection = Vector2.zero;
-    
+    private UnitAnimator unitAnim82r;
+    private InputAction.CallbackContext context;
+
+    private bool isMoving;
+    public bool IsMoving{
+        get{return isMoving;}
+    } 
+
     private void OnEnable() {
         playerMovement.Enable();
     }
@@ -19,11 +25,15 @@ public class UnitMovementController : MonoBehaviour
     }
 
     private void Awake() {
-        rgBody2D = GetComponent<Rigidbody2D>();    
+        rgBody2D = GetComponent<Rigidbody2D>();
+        isMoving = false;    
     }
 
+    
     public void MovementDirectionReadValues(){
         moveDirection = playerMovement.ReadValue<Vector2>();
+        playerMovement.performed += ctx => isMoving = true;
+        playerMovement.canceled += ctx => isMoving = false;
     }
 
     public void Rigidbody2DToMovement(){

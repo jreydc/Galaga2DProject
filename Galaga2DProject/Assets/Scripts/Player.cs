@@ -14,22 +14,21 @@ public class Player : Unit
     void Start()
     {
         unitMovementController = GetComponent<UnitMovementController>();
-        unitAnim82r = 
+        unitAnim82r = transform.GetChild(0).gameObject.GetComponent<UnitAnimator>();
     }
 
     // Update is called once per frame
     private void Update()
     {
-        /* float moveX = Input.GetAxis("Horizontal");
-        float moveY = Input.GetAxis("Vertical");
-        moveDirection = new Vector2(moveX, moveY).normalized; */
-        
-        //moveDirection = playerMovement.ReadValue<Vector2>();
         unitMovementController.MovementDirectionReadValues();
+        if(unitMovementController.IsMoving){
+            unitAnim82r.PlayerMoving();
+        }else{
+            unitAnim82r.PlayerIdle();
+        }
     }
 
     private void FixedUpdate() {
-        //rgBody2D.velocity = new Vector2(moveDirection .x * moveSpeed, moveDirection.y * moveSpeed);
         unitMovementController.Rigidbody2DToMovement();
     }
 }
