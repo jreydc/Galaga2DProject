@@ -172,6 +172,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4803365131872970}
   - component: {fileID: 212975254239921132}
+  - component: {fileID: 9126670360383927670}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -246,6 +247,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &9126670360383927670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1988959072326566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 318df9c9da81fce4996c9568ce283715, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealthPoints: 100
+  currentHealthPoints: 0
+  maxLifePoints: 3
+  currentLifePoints: 0
+  skills: 
 --- !u!1 &7273476100414029195
 GameObject:
   m_ObjectHideFlags: 0
