@@ -2,19 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BattleSystem : MonoBehaviour
+public class BattleSystem : Spawner
 {
+    ObjectPooler _objectPooler;
     [SerializeField]private float maxPosition;
     // Start is called before the first frame update
     void Start()
     {
-
+        _objectPooler = ObjectPooler._SingleInstance;
+        _objectPooler.FillThePoolCollection();
+        InvokeRepeating("StartBattle", 0, 3);
     }
 
-    // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
+        timeSinceSpawn += Time.deltaTime;
+        TimeToSpawn();
+
+        if(Input.GetKeyDown(KeyCode.Space)){
+            _objectPooler.ReturnToPool(newPool);    
+        }
+    }
+
+    private void StartBattle(){
         Vector3 enemyPosition = new Vector3(Random.Range(-maxPosition, maxPosition), transform.position.y, transform.position.z);
-        ObjectPooler._SingleInstance.SpawnFromPool("Invaders", enemyPosition, Quaternion.identity);
+        _objectPooler.SpawnFromPool(enemyPosition, Quaternion.identity);
     }
 }
