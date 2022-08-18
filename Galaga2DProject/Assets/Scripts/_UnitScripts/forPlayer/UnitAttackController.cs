@@ -7,7 +7,7 @@ public class UnitAttackController : MonoBehaviour, IAttackManager
     [SerializeField]private Transform projectileSpawner;
     [SerializeField]private GameObject projectile;
     [SerializeField]private float attackDelay;
-
+    
     private bool isAttacking;
     public bool IsAttacking{
         get{return isAttacking;}

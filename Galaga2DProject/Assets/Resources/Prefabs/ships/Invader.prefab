@@ -201,7 +201,14 @@ MonoBehaviour:
   maxLifePoints: 0
   currentLifePoints: 0
   skills: 
+  thePlayer: {fileID: 0}
+  scale: 1
+  speed: 1
+  maxDistance: 5
   time2Move: 0
+  time2Attack: 0
+  projectileSpawner: {fileID: 0}
+  projectile: {fileID: 0}
 --- !u!1 &1818141105757828
 GameObject:
   m_ObjectHideFlags: 0

@@ -178,18 +178,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6105277708553674472, guid: 401d8aca9e846254890399f66cd7de66,
         type: 3}
-      propertyPath: scale
-      value: 1
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 1876748203980267326, guid: 72503dc6ac2f67f4e9009a2e91d18f3f,
+        type: 3}
+    - target: {fileID: 6105277708553674472, guid: 401d8aca9e846254890399f66cd7de66,
+        type: 3}
+      propertyPath: time2Attack
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6105277708553674472, guid: 401d8aca9e846254890399f66cd7de66,
         type: 3}
-      propertyPath: speed
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6105277708553674472, guid: 401d8aca9e846254890399f66cd7de66,
-        type: 3}
-      propertyPath: maxDistance
-      value: 5
+      propertyPath: maxHealthPoints
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 401d8aca9e846254890399f66cd7de66, type: 3}
