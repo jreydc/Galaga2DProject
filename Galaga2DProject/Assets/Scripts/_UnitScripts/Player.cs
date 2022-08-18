@@ -24,6 +24,7 @@ public class Player : Unit
         }else{
             unitAnim82r.PlayerIdle();
         }
+
     }
 
     private void FixedUpdate() {

@@ -9,10 +9,10 @@ public class Spawner : MonoBehaviour, ISpawner
     public GameObject newPool;
 
     public void TimeToSpawn(){
-        if (timeSinceSpawn >= timeToSpawn){
+        /* if (timeSinceSpawn >= timeToSpawn){
             newPool = ObjectPooler._SingleInstance.SpawnFromPool(transform.position, Quaternion.identity);
             timeSinceSpawn = 0f;
-        }
+        } */
     }
 
     

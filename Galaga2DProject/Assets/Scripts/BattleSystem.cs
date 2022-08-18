@@ -4,28 +4,24 @@ using UnityEngine;
 
 public class BattleSystem : Spawner
 {
-    ObjectPooler _objectPooler;
+    [SerializeField]private ObjectPooler _enemyObjectPooler;
     [SerializeField]private float maxPosition;
     // Start is called before the first frame update
     void Start()
     {
-        _objectPooler = ObjectPooler._SingleInstance;
-        _objectPooler.FillThePoolCollection();
+        _enemyObjectPooler = GetComponent<ObjectPooler>();
+        //_enemyObjectPooler.FillThePoolCollection();
         InvokeRepeating("StartBattle", 0, 3);
     }
 
     void Update()
     {
         timeSinceSpawn += Time.deltaTime;
-        TimeToSpawn();
-
-        if(Input.GetKeyDown(KeyCode.Space)){
-            _objectPooler.ReturnToPool(newPool);    
-        }
+        //TimeToSpawn();
     }
 
     private void StartBattle(){
         Vector3 enemyPosition = new Vector3(Random.Range(-maxPosition, maxPosition), transform.position.y, transform.position.z);
-        _objectPooler.SpawnFromPool(enemyPosition, Quaternion.identity);
+        //_enemyObjectPooler.SpawnFromPool(enemyPosition, Quaternion.identity);
     }
 }
