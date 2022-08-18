@@ -22,4 +22,7 @@ public class Enemy : Unit
             unitAnim82r.PlayerMoving();
         }
     }
+
+    public void UnitMovementDirection(){
+    }
 }

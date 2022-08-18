@@ -2,7 +2,7 @@
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class UnitMovementController : MonoBehaviour
+public class UnitMovementController : MonoBehaviour, IMovementManager
 {
     private Rigidbody2D rgBody2D;
     [SerializeField]private InputAction playerMovement;

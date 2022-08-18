@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 [RequireComponent(typeof(Animator))]
-public class UnitAnimator : MonoBehaviour
+public class UnitAnimator : MonoBehaviour, IAnimator
 {
     const string PLAYER_IDLE = "Idle";
     const string PLAYER_MOVING = "Moving";
@@ -34,7 +34,6 @@ public class UnitAnimator : MonoBehaviour
     public void PlayerMoving(){
         ChangeAnimationState(PLAYER_MOVING);
         attackDelay = anime2r.GetCurrentAnimatorStateInfo(0).length;
-        //Invoke("AttackComplete2Idle", attackDelay);
     }
     
     public void PlayerIdle(){
