@@ -27,8 +27,9 @@ public class Player : Unit
             unitAnim82r.PlayerIdle();
         }
 
-        if(unitAttackController.IsAttacking){
+        if(unitAttackController.IsAttacking && unitAttackController.GetAttackDelay == 0f){
             unitAttackController.Shoot();
+            Debug.Log("Shooting");
         }
 
     }

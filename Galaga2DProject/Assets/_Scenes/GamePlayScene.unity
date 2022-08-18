@@ -136,6 +136,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1512782934554904, guid: 401d8aca9e846254890399f66cd7de66, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 1818141105757828, guid: 401d8aca9e846254890399f66cd7de66, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -407,6 +411,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1988959072326566, guid: 2ce1fb9d977e03b49a1ce0113faf945e, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 4803365131872970, guid: 2ce1fb9d977e03b49a1ce0113faf945e, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -473,9 +481,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4607902095653338346, guid: 2ce1fb9d977e03b49a1ce0113faf945e,
         type: 3}
+      propertyPath: playerAttack.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4607902095653338346, guid: 2ce1fb9d977e03b49a1ce0113faf945e,
+        type: 3}
+      propertyPath: playerAttack.m_Flags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4607902095653338346, guid: 2ce1fb9d977e03b49a1ce0113faf945e,
+        type: 3}
       propertyPath: projectileSpawnPosition
       value: 
       objectReference: {fileID: 1354178128}
+    - target: {fileID: 4607902095653338346, guid: 2ce1fb9d977e03b49a1ce0113faf945e,
+        type: 3}
+      propertyPath: playerAttack.m_Interactions
+      value: Press(behavior=2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4607902095653338346, guid: 2ce1fb9d977e03b49a1ce0113faf945e,
+        type: 3}
+      propertyPath: playerAttack.m_ExpectedControlType
+      value: Button
+      objectReference: {fileID: 0}
     - target: {fileID: 4607902095653338346, guid: 2ce1fb9d977e03b49a1ce0113faf945e,
         type: 3}
       propertyPath: playerAttack.m_SingletonActionBindings.Array.size
@@ -504,7 +532,7 @@ PrefabInstance:
     - target: {fileID: 4607902095653338346, guid: 2ce1fb9d977e03b49a1ce0113faf945e,
         type: 3}
       propertyPath: playerAttack.m_SingletonActionBindings.Array.data[0].m_Path
-      value: <Keyboard>/space
+      value: <Mouse>/leftButton
       objectReference: {fileID: 0}
     - target: {fileID: 4607902095653338346, guid: 2ce1fb9d977e03b49a1ce0113faf945e,
         type: 3}
@@ -545,6 +573,11 @@ PrefabInstance:
         type: 3}
       propertyPath: playerAttack.m_SingletonActionBindings.Array.data[2].m_Action
       value: Player Attack
+      objectReference: {fileID: 0}
+    - target: {fileID: 4607902095653338346, guid: 2ce1fb9d977e03b49a1ce0113faf945e,
+        type: 3}
+      propertyPath: playerAttack.m_SingletonActionBindings.Array.data[0].m_Interactions
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
@@ -874,6 +907,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 869000304546690269, guid: d3caec5cc91d10e4f94e73dc27bc85e8,
+        type: 3}
+      propertyPath: projectileSpeed
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6645701168954957981, guid: d3caec5cc91d10e4f94e73dc27bc85e8,
         type: 3}
       propertyPath: m_RootOrder
