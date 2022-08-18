@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(CapsuleCollider2D))]
 public class Enemy : Unit
 {
     private UnitAnimator unitAnim82r;
@@ -20,6 +21,5 @@ public class Enemy : Unit
         if(time2Move >= 10f){
             unitAnim82r.PlayerMoving();
         }
-        
     }
 }
