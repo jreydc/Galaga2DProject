@@ -24,7 +24,12 @@ public class Projectile : MonoBehaviour
     private void CheckCollision(Collider2D other) {
         if (other.CompareTag("Enemy")){
             Destroy(gameObject);
-        }        
+            Debug.Log("Detected!" + other);
+        }     
+        if (other.CompareTag("Player")){
+            Destroy(gameObject);
+            Debug.Log("Detected!" + other);
+        }   
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
