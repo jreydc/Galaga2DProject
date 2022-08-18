@@ -32,13 +32,13 @@ public class Enemy : Unit
     private void Update()
     {
         time2Move += Time.deltaTime;
-        time2Attack += Time.fixedDeltaTime;
+        time2Attack += Time.deltaTime;
         if(time2Move >= 10f){
             unitAnim82r.PlayerMoving();
             moveTowardsDPlayer = true;
         }
 
-        if(time2Move >= 0.5f){
+        if(time2Attack >= 0.5f){
             Shoot();
             time2Attack = 0f;
         }

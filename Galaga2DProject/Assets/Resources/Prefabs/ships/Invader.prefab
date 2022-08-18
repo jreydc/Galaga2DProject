@@ -196,7 +196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbe7592bf56f6a74995b16a94231d02f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealthPoints: 0
+  maxHealthPoints: 10
   currentHealthPoints: 0
   maxLifePoints: 0
   currentLifePoints: 0
@@ -208,7 +208,8 @@ MonoBehaviour:
   time2Move: 0
   time2Attack: 0
   projectileSpawner: {fileID: 0}
-  projectile: {fileID: 0}
+  projectile: {fileID: 1876748203980267326, guid: 72503dc6ac2f67f4e9009a2e91d18f3f,
+    type: 3}
 --- !u!1 &1818141105757828
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,7 +348,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9031421451928909842}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.357, z: 0}
+  m_LocalPosition: {x: 0, y: 0.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4193583667243190}

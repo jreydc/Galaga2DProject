@@ -176,21 +176,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6105277708553674472, guid: 401d8aca9e846254890399f66cd7de66,
+    - target: {fileID: 5616231052750527416, guid: 401d8aca9e846254890399f66cd7de66,
         type: 3}
-      propertyPath: projectile
-      value: 
-      objectReference: {fileID: 1876748203980267326, guid: 72503dc6ac2f67f4e9009a2e91d18f3f,
-        type: 3}
-    - target: {fileID: 6105277708553674472, guid: 401d8aca9e846254890399f66cd7de66,
-        type: 3}
-      propertyPath: time2Attack
-      value: 0
+      propertyPath: m_Size.x
+      value: 0.7
       objectReference: {fileID: 0}
-    - target: {fileID: 6105277708553674472, guid: 401d8aca9e846254890399f66cd7de66,
+    - target: {fileID: 5616231052750527416, guid: 401d8aca9e846254890399f66cd7de66,
         type: 3}
-      propertyPath: maxHealthPoints
-      value: 10
+      propertyPath: m_Size.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5616231052750527416, guid: 401d8aca9e846254890399f66cd7de66,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.06
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 401d8aca9e846254890399f66cd7de66, type: 3}
@@ -395,6 +394,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4803365131872970, guid: 2ce1fb9d977e03b49a1ce0113faf945e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7976176851811761122, guid: 2ce1fb9d977e03b49a1ce0113faf945e,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 1.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7976176851811761122, guid: 2ce1fb9d977e03b49a1ce0113faf945e,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7976176851811761122, guid: 2ce1fb9d977e03b49a1ce0113faf945e,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7976176851811761122, guid: 2ce1fb9d977e03b49a1ce0113faf945e,
+        type: 3}
+      propertyPath: m_Offset.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
