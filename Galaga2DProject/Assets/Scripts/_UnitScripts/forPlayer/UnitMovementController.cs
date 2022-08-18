@@ -28,7 +28,7 @@ public class UnitMovementController : MonoBehaviour
     }
 
     
-    public void MovementDirectionReadValues(){
+    public void UnitMovementDirection(){
         moveDirection = playerMovement.ReadValue<Vector2>();
         playerMovement.performed += ctx => isMoving = true;
         playerMovement.canceled += ctx => isMoving = false;
