@@ -455,9 +455,106 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4607902095653338346, guid: 2ce1fb9d977e03b49a1ce0113faf945e,
+        type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 6645701168954957982, guid: d3caec5cc91d10e4f94e73dc27bc85e8,
+        type: 3}
+    - target: {fileID: 4607902095653338346, guid: 2ce1fb9d977e03b49a1ce0113faf945e,
+        type: 3}
+      propertyPath: playerAttack.m_Id
+      value: 9ee09987-8b81-4ba2-ad1a-589bc89d3586
+      objectReference: {fileID: 0}
+    - target: {fileID: 4607902095653338346, guid: 2ce1fb9d977e03b49a1ce0113faf945e,
+        type: 3}
+      propertyPath: playerAttack.m_Name
+      value: Player Attack
+      objectReference: {fileID: 0}
+    - target: {fileID: 4607902095653338346, guid: 2ce1fb9d977e03b49a1ce0113faf945e,
+        type: 3}
+      propertyPath: projectileSpawnPosition
+      value: 
+      objectReference: {fileID: 1354178128}
+    - target: {fileID: 4607902095653338346, guid: 2ce1fb9d977e03b49a1ce0113faf945e,
+        type: 3}
+      propertyPath: playerAttack.m_SingletonActionBindings.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4607902095653338346, guid: 2ce1fb9d977e03b49a1ce0113faf945e,
+        type: 3}
+      propertyPath: playerAttack.m_SingletonActionBindings.Array.data[0].m_Id
+      value: cba46b6f-9d82-4a10-88d6-43ce3b0e0c5f
+      objectReference: {fileID: 0}
+    - target: {fileID: 4607902095653338346, guid: 2ce1fb9d977e03b49a1ce0113faf945e,
+        type: 3}
+      propertyPath: playerAttack.m_SingletonActionBindings.Array.data[1].m_Id
+      value: 930d5389-ab48-4429-82bd-8924d09c5cad
+      objectReference: {fileID: 0}
+    - target: {fileID: 4607902095653338346, guid: 2ce1fb9d977e03b49a1ce0113faf945e,
+        type: 3}
+      propertyPath: playerAttack.m_SingletonActionBindings.Array.data[2].m_Id
+      value: 930d5389-ab48-4429-82bd-8924d09c5cad
+      objectReference: {fileID: 0}
+    - target: {fileID: 4607902095653338346, guid: 2ce1fb9d977e03b49a1ce0113faf945e,
+        type: 3}
+      propertyPath: playerAttack.m_SingletonActionBindings.Array.data[0].m_Name
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4607902095653338346, guid: 2ce1fb9d977e03b49a1ce0113faf945e,
+        type: 3}
+      propertyPath: playerAttack.m_SingletonActionBindings.Array.data[0].m_Path
+      value: <Keyboard>/space
+      objectReference: {fileID: 0}
+    - target: {fileID: 4607902095653338346, guid: 2ce1fb9d977e03b49a1ce0113faf945e,
+        type: 3}
+      propertyPath: playerAttack.m_SingletonActionBindings.Array.data[1].m_Name
+      value: binding
+      objectReference: {fileID: 0}
+    - target: {fileID: 4607902095653338346, guid: 2ce1fb9d977e03b49a1ce0113faf945e,
+        type: 3}
+      propertyPath: playerAttack.m_SingletonActionBindings.Array.data[2].m_Name
+      value: binding
+      objectReference: {fileID: 0}
+    - target: {fileID: 4607902095653338346, guid: 2ce1fb9d977e03b49a1ce0113faf945e,
+        type: 3}
+      propertyPath: playerAttack.m_SingletonActionBindings.Array.data[0].m_Flags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4607902095653338346, guid: 2ce1fb9d977e03b49a1ce0113faf945e,
+        type: 3}
+      propertyPath: playerAttack.m_SingletonActionBindings.Array.data[1].m_Flags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4607902095653338346, guid: 2ce1fb9d977e03b49a1ce0113faf945e,
+        type: 3}
+      propertyPath: playerAttack.m_SingletonActionBindings.Array.data[2].m_Flags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4607902095653338346, guid: 2ce1fb9d977e03b49a1ce0113faf945e,
+        type: 3}
+      propertyPath: playerAttack.m_SingletonActionBindings.Array.data[0].m_Action
+      value: Player Attack
+      objectReference: {fileID: 0}
+    - target: {fileID: 4607902095653338346, guid: 2ce1fb9d977e03b49a1ce0113faf945e,
+        type: 3}
+      propertyPath: playerAttack.m_SingletonActionBindings.Array.data[1].m_Action
+      value: Player Attack
+      objectReference: {fileID: 0}
+    - target: {fileID: 4607902095653338346, guid: 2ce1fb9d977e03b49a1ce0113faf945e,
+        type: 3}
+      propertyPath: playerAttack.m_SingletonActionBindings.Array.data[2].m_Action
+      value: Player Attack
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 2ce1fb9d977e03b49a1ce0113faf945e, type: 3}
+--- !u!4 &1354178128 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8887376525047225637, guid: 2ce1fb9d977e03b49a1ce0113faf945e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1314104592}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1398585566
 GameObject:
   m_ObjectHideFlags: 0

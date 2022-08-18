@@ -8,10 +8,12 @@ public class Player : Unit
 {
     private UnitAnimator unitAnim82r;
     private UnitMovementController unitMovementController;
+    private UnitAttackController unitAttackController;
 
-    void Start()
+    private void Awake()
     {
         unitMovementController = GetComponent<UnitMovementController>();
+        unitAttackController = GetComponent<UnitAttackController>();
         unitAnim82r = transform.GetChild(0).gameObject.GetComponent<UnitAnimator>();
     }
 
@@ -23,6 +25,10 @@ public class Player : Unit
             unitAnim82r.PlayerMoving();
         }else{
             unitAnim82r.PlayerIdle();
+        }
+
+        if(unitAttackController.IsAttacking){
+            unitAttackController.Shoot();
         }
 
     }
