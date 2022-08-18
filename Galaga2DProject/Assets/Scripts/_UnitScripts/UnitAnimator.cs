@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 [RequireComponent(typeof(Animator))]
-public class UnitAnimator : MonoBehaviour
+public class UnitAnimator : MonoBehaviour, IAnimator
 {
     const string PLAYER_IDLE = "Idle";
     const string PLAYER_MOVING = "Moving";
