@@ -20,7 +20,7 @@ public class Player : Unit
     // Update is called once per frame
     private void Update()
     {
-        unitMovementController.MovementDirectionReadValues();
+        unitMovementController.UnitMovementDirection();
         if(unitMovementController.IsMoving){
             unitAnim82r.PlayerMoving();
         }else{
