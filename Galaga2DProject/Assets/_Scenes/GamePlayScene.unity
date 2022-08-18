@@ -223,6 +223,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.4
       objectReference: {fileID: 0}
+    - target: {fileID: 5616231052750527416, guid: 401d8aca9e846254890399f66cd7de66,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5674793459733036173, guid: 401d8aca9e846254890399f66cd7de66,
         type: 3}
       propertyPath: m_Icon
@@ -682,7 +687,7 @@ PrefabInstance:
     - target: {fileID: 1876748203980267321, guid: 72503dc6ac2f67f4e9009a2e91d18f3f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.754
       objectReference: {fileID: 0}
     - target: {fileID: 1876748203980267321, guid: 72503dc6ac2f67f4e9009a2e91d18f3f,
         type: 3}
@@ -728,6 +733,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EnemyProjectile
+      objectReference: {fileID: 0}
+    - target: {fileID: 1876748203980267327, guid: 72503dc6ac2f67f4e9009a2e91d18f3f,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72503dc6ac2f67f4e9009a2e91d18f3f, type: 3}
@@ -925,7 +935,7 @@ PrefabInstance:
     - target: {fileID: 6645701168954957981, guid: d3caec5cc91d10e4f94e73dc27bc85e8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.864
       objectReference: {fileID: 0}
     - target: {fileID: 6645701168954957981, guid: d3caec5cc91d10e4f94e73dc27bc85e8,
         type: 3}
@@ -971,6 +981,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlayerProjectile
+      objectReference: {fileID: 0}
+    - target: {fileID: 6645701168954957983, guid: d3caec5cc91d10e4f94e73dc27bc85e8,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3caec5cc91d10e4f94e73dc27bc85e8, type: 3}
