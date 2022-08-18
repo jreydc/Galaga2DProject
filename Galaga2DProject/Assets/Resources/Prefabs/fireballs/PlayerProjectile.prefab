@@ -111,4 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43e37d88101d43d4b9ebff08fe886f39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 567
   projectileSpeed: 3
