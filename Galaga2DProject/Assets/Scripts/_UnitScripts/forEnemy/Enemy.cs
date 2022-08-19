@@ -27,8 +27,11 @@ public class Enemy : Unit
     // Update is called once per frame
     private void Update()
     {
+        /* 
+            The Enemy/Invader structure is not yet fully finished and Single Responsibility Pattern is currently ongoing.
+         */
+
          enemyMovementController.UnitMovementDirection();
-        //time2Move += Time.deltaTime;
         
         if(enemyMovementController.IsMoving){
             unitAnim82r.PlayerMoving();
