@@ -34,7 +34,7 @@ public class PlayerMovementController : MonoBehaviour, IMovementManager
         playerMovement.canceled += ctx => isMoving = false;
     }
 
-    public void Rigidbody2DToMovement(){
+    public void UnitMovementComputations(){
         rgBody2D.velocity = new Vector2(moveDirection .x * moveSpeed, moveDirection.y * moveSpeed);
     }
 }
