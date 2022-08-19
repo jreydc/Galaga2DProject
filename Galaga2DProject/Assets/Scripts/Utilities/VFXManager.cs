@@ -5,7 +5,7 @@ using UnityEngine;
 public class VFXManager : Singleton<VFXManager>
 {
     [SerializeField]private GameObject invaderImpactVFXExplosion;
-    [SerializeField]private GameObject playerImpactVFXExplosion;
+    [SerializeField]private GameObject playerImpactVFXExplosion;    
     
     public void InvaderVFXExplosionPlay(Vector3 position){
         Instantiate(invaderImpactVFXExplosion, position, Quaternion.identity);

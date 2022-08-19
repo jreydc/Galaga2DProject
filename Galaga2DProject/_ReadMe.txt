@@ -19,3 +19,7 @@ Hit Impact Effects: https://assetstore.unity.com/packages/vfx/particles/hit-impa
 Sound FX:
 https://assetstore.unity.com/packages/audio/sound-fx/free-sound-effects-pack-155776
 https://assetstore.unity.com/packages/audio/music/soundtrack-free-105631
+
+BGMusic:
+JewelBeat - Game Player
+JewelBeat - Groove Thing Tonight
