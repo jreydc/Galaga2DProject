@@ -2,17 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SoundFXManager : MonoBehaviour
+public class SoundFXManager : Singleton<SoundFXManager>
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    [SerializeField]private AudioSource playerShootSFX;
+    [SerializeField]private AudioSource invaderShootSFX;
+    
+    private void Start() {
+        playerShootSFX = transform.GetChild(0).GetComponent<AudioSource>();
+        invaderShootSFX = transform.GetChild(1).GetComponent<AudioSource>();
+    }
+    public void PlayerShootingSFXPlay(){
+        playerShootSFX.Play();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void InvaderShootingSFXPlay(){
+        invaderShootSFX.Play();
     }
 }
