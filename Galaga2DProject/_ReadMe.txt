@@ -1,4 +1,10 @@
-The project were made in Unity Game Engine 2019.4.3.38f1 version.
+The project were made in Unity Game Engine 2019.4.3.38f1 version. Implemented was the new Input System 1.3.0.
+
+NOTE: 
+Player Controls = W,A,S,D (Keyboard) for Movements
+		= Space (Keyboard) for Fire (Shoot)
+
+
 
 Special thanks to the Code Monkey YT channel (https://www.youtube.com/c/CodeMonkeyUnity) for the Health Systems and Health bar
 

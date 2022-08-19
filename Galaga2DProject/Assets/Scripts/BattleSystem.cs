@@ -29,9 +29,9 @@ public class BattleSystem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _enemyObjectPooler = GetComponent<ObjectPooler>();
-        //_enemyObjectPooler.FillThePoolCollection();
-        InvokeRepeating("StartBattle", 0, 3);
+        /* _enemyObjectPooler = GetComponent<ObjectPooler>();
+        _enemyObjectPooler.FillThePoolCollection();
+        InvokeRepeating("StartBattle", 0, 3); */
     }
 
     void Update()
@@ -40,7 +40,7 @@ public class BattleSystem : MonoBehaviour
     }
 
     private void StartBattle(){
-        Vector3 enemyPosition = new Vector3(Random.Range(-maxPosition, maxPosition), transform.position.y, transform.position.z);
-        //_enemyObjectPooler.SpawnFromPool(enemyPosition, Quaternion.identity);
+       /*  Vector3 enemyPosition = new Vector3(Random.Range(-maxPosition, maxPosition), transform.position.y, transform.position.z);
+        _enemyObjectPooler.SpawnFromPool(enemyPosition, Quaternion.identity); */
     }
 }
