@@ -2,17 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VFXManager : MonoBehaviour
+public class VFXManager : Singleton<VFXManager>
 {
+    [SerializeField]private GameObject invaderVFXExplosion;
     // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void InvaderVFXExplosionPlay(Vector3 position){
+        Instantiate(invaderVFXExplosion, position, Quaternion.identity);
     }
 }
