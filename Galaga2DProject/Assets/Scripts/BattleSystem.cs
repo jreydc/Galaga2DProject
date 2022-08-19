@@ -13,7 +13,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BattleSystem : Spawner
+public class BattleSystem : MonoBehaviour
 {
     /* 
         not finished yet...formulating other features of the BattleSystems like as follows:
@@ -36,8 +36,7 @@ public class BattleSystem : Spawner
 
     void Update()
     {
-        timeSinceSpawn += Time.deltaTime;
-        //TimeToSpawn();
+        
     }
 
     private void StartBattle(){

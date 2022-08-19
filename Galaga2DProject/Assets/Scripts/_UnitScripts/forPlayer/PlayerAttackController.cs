@@ -40,7 +40,7 @@ public class PlayerAttackController : MonoBehaviour, IAttackManager
     }
 
     public void Shoot(){
-        Instantiate(projectile, projectileSpawner.position, Quaternion.identity);
+        Spawner._SingleInstance.Instantiator(projectile, projectileSpawner.position);
         SoundFXManager._SingleInstance.PlayerShootingSFXPlay();
     }
 }

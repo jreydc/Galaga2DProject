@@ -2,18 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spawner : MonoBehaviour, ISpawner
+public class Spawner : Singleton<Spawner>
 {
-    public float timeToSpawn;
-    public float timeSinceSpawn;
-    public GameObject newPool;
-
-    public void TimeToSpawn(){
-        /* if (timeSinceSpawn >= timeToSpawn){
-            newPool = ObjectPooler._SingleInstance.SpawnFromPool(transform.position, Quaternion.identity);
-            timeSinceSpawn = 0f;
-        } */
-    }
-
-    
+    public GameObject Instantiator(GameObject obj, Vector3 position){
+        var instantiatedOBJ = Instantiate(obj, position, Quaternion.identity);
+        return instantiatedOBJ;
+    }    
 }
