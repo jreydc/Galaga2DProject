@@ -10,5 +10,10 @@ Reference on the possible gameplay and enemy animation: Zigurous YT Channel (htt
 
 https://www.youtube.com/watch?v=qWDQgmdUzWI
 
+ASSETS:
 
+Cartoon VFX: https://assetstore.unity.com/packages/vfx/particles/cartoon-fx-free-109565
 
+Sound FX:
+https://assetstore.unity.com/packages/audio/sound-fx/free-sound-effects-pack-155776
+https://assetstore.unity.com/packages/audio/music/soundtrack-free-105631
