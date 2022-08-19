@@ -8,7 +8,7 @@ public class PlayerProjectile : Projectile
     public override void CheckCollision(Collider2D other)
     {
         if (other.tag == "Enemy"){
-            Destroy(gameObject);
+            Destroy(gameObject); //Destroy temporarily...planning to utilize the Object Pooler ReturnToPool method soon.
         }
 
     }
