@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1876748203980267321}
   - component: {fileID: 1876748203980267320}
   - component: {fileID: 1876748203980267327}
-  - component: {fileID: 303692392817225789}
+  - component: {fileID: 7836184787500661791}
   m_Layer: 0
   m_Name: EnemyProjectile
   m_TagString: Untagged
@@ -99,7 +99,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.09
---- !u!114 &303692392817225789
+--- !u!114 &7836184787500661791
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -108,10 +108,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 1876748203980267326}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43e37d88101d43d4b9ebff08fe886f39, type: 3}
+  m_Script: {fileID: 11500000, guid: 6288851df238ae34eaa4e5582674237a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 311
-  projectileSpeed: -3
+  projectileSpeed: 2
+  direction: {x: 0, y: 1, z: 0}

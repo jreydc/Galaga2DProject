@@ -13,6 +13,11 @@ public class PlayerProjectile : Projectile
 
     }
 
+    public override void OnEnable()
+    {
+        base.OnEnable();
+    }
+
     private void Update() {
         ProjectileMovement();
     }

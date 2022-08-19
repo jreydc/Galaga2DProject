@@ -2,24 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/* 
+    Not yet implemented the game management and gameplay design
 
+ */
 public class GameManager : Singleton<GameManager>
 {
-
-    #region GameManager Persistent Instantiation
-    private static GameManager instance;
-    public static GameManager GetInstance(){
-        return instance;
-    }
-    protected override void Awake() {
-        if (instance == null){
-            instance = this;
-            DontDestroyOnLoad(instance.gameObject);
-        }else{
-            Destroy(instance.gameObject);
-        }
-    }
-    #endregion
     
     // Start is called before the first frame update
     void Start()
