@@ -8,8 +8,11 @@ public class ButtonHandler : MonoBehaviour
     void Start()
     {
         playButton = GetComponent<Button>();
-        playButton.onClick.AddListener(delegate {
+        playButton.onClick.AddListener(() => {
+            StartCoroutine(SceneController._SingleInstance.LoadingDetails());
             SceneController._SingleInstance.LoadLevel("GamePlayScene");
+            SoundFXManager._SingleInstance.BGMusicMainMenuStop();
+            SoundFXManager._SingleInstance.BGMusicGamePlay();
         });
     }
 }

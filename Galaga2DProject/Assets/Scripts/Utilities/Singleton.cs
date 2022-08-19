@@ -10,7 +10,7 @@ public class Singleton<T> : MonoBehaviour where T : Singleton<T>
         private set{}
     }
 
-    protected virtual void Awake()
+    public virtual void Awake()
     {
         if (_instance == null)
         {
