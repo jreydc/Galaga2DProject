@@ -5,8 +5,6 @@ https://www.youtube.com/watch?v=Gtw7VyuMdDc
 https://www.youtube.com/watch?v=0T5ei9jN63M
  */
 
-
-
 using System;
 public class HealthSystem
 {
