@@ -26,8 +26,7 @@ public abstract class Projectile : MonoBehaviour, ICollisionManager
     
     public virtual void CheckCollision(Collider2D other) {
         Debug.Log("Detected!" + other);
-        Destroy(this.gameObject);
-        Destroy(other.gameObject);
+        Destroy(gameObject);
     }
 
 }

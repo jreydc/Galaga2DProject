@@ -10,6 +10,7 @@ public class EnemyProjectile : Projectile
     {
         base.CheckCollision(other);
         if (other.tag == "Player"){//Destroy temporarily...planning to utilize the Object Pooler ReturnToPool method soon.
+            Destroy(other.gameObject);
             SoundFXManager._SingleInstance.PlayerExplosionSFXPlay();
             VFXManager._SingleInstance.PlayerVFXExplosionPlay(other.gameObject.transform.position); 
         }
