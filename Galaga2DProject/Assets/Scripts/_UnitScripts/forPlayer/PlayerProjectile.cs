@@ -10,6 +10,7 @@ public class PlayerProjectile : Projectile
         if (other.tag == "Enemy"){//Destroy temporarily...planning to utilize the Object Pooler ReturnToPool method soon.
             Destroy(gameObject);
             Destroy(other.gameObject); 
+            SoundFXManager._SingleInstance.InvaderExplosionSFXPlay();
             VFXManager._SingleInstance.InvaderVFXExplosionPlay(other.gameObject.transform.position);
         }
     }

@@ -11,6 +11,7 @@ public class EnemyProjectile : Projectile
         if (other.tag == "Player"){//Destroy temporarily...planning to utilize the Object Pooler ReturnToPool method soon.
             Destroy(gameObject);
             Destroy(other.gameObject);
+            SoundFXManager._SingleInstance.PlayerExplosionSFXPlay();
             VFXManager._SingleInstance.PlayerVFXExplosionPlay(other.gameObject.transform.position); 
         }
 

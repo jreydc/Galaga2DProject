@@ -15,6 +15,11 @@ public class SceneController : Singleton<SceneController>
         SceneManager.UnloadSceneAsync(levelName, UnloadSceneOptions.None);
     }
 
+    /* 
+        Reference: https://gamedevbeginner.com/how-to-load-a-new-scene-in-unity-with-a-loading-screen/
+
+        By: John French - May 14, 2020
+     */
     public IEnumerator LoadingDetails(){
         yield return null;
 
