@@ -20,14 +20,23 @@ public class SoundFXManager : Singleton<SoundFXManager>
         invaderShootSFX = transform.GetChild(1).GetComponent<AudioSource>();
         bgMusicGameplay = transform.GetChild(2).GetComponent<AudioSource>();
         bgMusicMainMenu = transform.GetChild(3).GetComponent<AudioSource>();
+        playerExplosionSFX = transform.GetChild(4).GetComponent<AudioSource>();
+        invaderExplosionSFX = transform.GetChild(5).GetComponent<AudioSource>();
     }
     public void PlayerShootingSFXPlay(){
         playerShootSFX.Play();
     }
-
+    public void PlayerExplosionSFXPlay(){
+        playerExplosionSFX.Play();
+    }
     public void InvaderShootingSFXPlay(){
         invaderShootSFX.Play();
     }
+    public void InvaderExplosionSFXPlay(){
+        invaderExplosionSFX.Play();
+    }
+
+
 
     public void BGMusicGamePlay(){
         bgMusicGameplay.Play();
