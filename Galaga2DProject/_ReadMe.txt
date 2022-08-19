@@ -14,6 +14,12 @@ ASSETS:
 
 Cartoon VFX: https://assetstore.unity.com/packages/vfx/particles/cartoon-fx-free-109565
 
+Hit Impact Effects: https://assetstore.unity.com/packages/vfx/particles/hit-impact-effects-free-218385
+
 Sound FX:
 https://assetstore.unity.com/packages/audio/sound-fx/free-sound-effects-pack-155776
 https://assetstore.unity.com/packages/audio/music/soundtrack-free-105631
+
+BGMusic:
+JewelBeat - Game Player
+JewelBeat - Groove Thing Tonight
