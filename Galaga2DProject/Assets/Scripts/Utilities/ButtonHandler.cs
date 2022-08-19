@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 public class ButtonHandler : MonoBehaviour
 {
     [SerializeField]private Button playButton;
-    // Start is called before the first frame update
     void Start()
     {
         playButton = GetComponent<Button>();

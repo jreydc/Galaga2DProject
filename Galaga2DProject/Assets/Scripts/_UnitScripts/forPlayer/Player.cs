@@ -7,34 +7,34 @@ using UnityEngine.InputSystem;
 public class Player : Unit
 {
     private UnitAnimator unitAnim82r;
-    private UnitMovementController unitMovementController;
-    private UnitAttackController unitAttackController;
+    private PlayerMovementController playerMovementController;
+    private PlayerAttackController playerAttackController;
 
     private void Awake()
     {
-        unitMovementController = GetComponent<UnitMovementController>();
-        unitAttackController = GetComponent<UnitAttackController>();
+        playerMovementController = GetComponent<PlayerMovementController>();
+        playerAttackController = GetComponent<PlayerAttackController>();
         unitAnim82r = transform.GetChild(0).gameObject.GetComponent<UnitAnimator>();
     }
 
     // Update is called once per frame
     private void Update()
     {
-        unitMovementController.UnitMovementDirection();
-        if(unitMovementController.IsMoving){
+        playerMovementController.UnitMovementDirection();
+        if(playerMovementController.IsMoving){
             unitAnim82r.PlayerMoving();
         }else{
             unitAnim82r.PlayerIdle();
         }
 
-        if(unitAttackController.IsAttacking && unitAttackController.GetAttackDelay == 0f){
-            unitAttackController.Shoot();
+        if(playerAttackController.IsAttacking && playerAttackController.GetAttackDelay == 0f){
+            playerAttackController.Shoot();
             Debug.Log("Shooting");
         }
 
     }
 
     private void FixedUpdate() {
-        unitMovementController.Rigidbody2DToMovement();
+        playerMovementController.Rigidbody2DToMovement();
     }
 }

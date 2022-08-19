@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class UnitAttackController : MonoBehaviour, IAttackManager
+public class PlayerAttackController : MonoBehaviour, IAttackManager
 {
     [SerializeField]private InputAction playerAttack;
     [SerializeField]private Transform projectileSpawner;
