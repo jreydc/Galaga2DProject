@@ -5,7 +5,6 @@ using UnityEngine;
 [RequireComponent(typeof(CircleCollider2D))]
 public abstract class Projectile : MonoBehaviour, ICollisionManager
 {
-    [SerializeField]public LayerMask layerMask;
     [SerializeField]public float projectileSpeed;
     public Vector3 direction = Vector3.up;
     public System.Action<Projectile> destroyed;
@@ -16,8 +15,11 @@ public abstract class Projectile : MonoBehaviour, ICollisionManager
         }
     }    
 
-    // Update is called once per frame
-    public void ProjectileMovement()
+    public virtual void OnEnable(){
+        Debug.Log("Projectile is Spawned!");
+    }
+
+    public virtual void ProjectileMovement()
     {
         transform.position += direction * projectileSpeed * Time.deltaTime;
     }
