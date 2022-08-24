@@ -16,7 +16,7 @@ public abstract class Projectile : MonoBehaviour, ICollisionManager
     }    
 
     public virtual void OnEnable(){
-        Debug.Log("Projectile is Spawned!");
+        //Debug.Log("Projectile is Spawned!");
     }
 
     public virtual void ProjectileMovement()

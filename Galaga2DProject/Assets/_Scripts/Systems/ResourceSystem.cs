@@ -6,7 +6,7 @@ using UnityEngine;
 /// One repository for all scriptable objects. Create your query methods here to keep your business logic clean.
 /// </summary>
 
-public class ResourceSystem : MonoBehaviour
+public class ResourceSystem : StaticInstance<ResourceSystem>
 {
     private UnitBase unit;
     public UnitBase[] units { get; private set; }

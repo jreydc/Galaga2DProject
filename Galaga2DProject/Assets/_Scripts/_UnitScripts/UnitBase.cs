@@ -5,7 +5,7 @@
 /// </summary>
 public class UnitBase : MonoBehaviour
 {
-    public System.Action killed;
+    public System.Action IsKilled;
     public UnitAnimator unitAnim82r;
     public UnitStats Stats { get; private set; }
 

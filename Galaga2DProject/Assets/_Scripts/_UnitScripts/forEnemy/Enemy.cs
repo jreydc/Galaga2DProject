@@ -19,6 +19,9 @@ public class Enemy : UnitBase {
     {        
         enemyMovementController = GetComponent<EnemyMovementController>();
         projectileSpawner = transform.GetChild(3).gameObject.transform;
+        IsKilled += () => {
+            gameObject.SetActive(false);
+        };
     }
 
     // Update is called once per frame
@@ -28,7 +31,7 @@ public class Enemy : UnitBase {
             The Enemy/Invader structure is not yet fully finished and Single Responsibility Pattern is currently ongoing.
          */
 
-         enemyMovementController.UnitMovementDirection();
+        enemyMovementController.UnitMovementDirection();
         
         if(enemyMovementController.IsMoving){
             unitAnim82r.PlayerMoving();
@@ -38,16 +41,18 @@ public class Enemy : UnitBase {
         if(time2Attack >= 0.5f){
             Shoot();
             time2Attack = 0f;
+            IsKilled?.Invoke();
         }
 
-        if(killed != null){
-            killed?.Invoke();
-        }
+/*         if(killed != null){
+            killed += () => {
+                gameObject.SetActive(false);
+            };
+        } */
     }
 
     private void FixedUpdate() {
        
-        
     }
 
 
