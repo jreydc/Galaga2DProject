@@ -16,4 +16,6 @@ MonoBehaviour:
   currentHealthPoints: 0
   maxLifePoints: 1
   currentLifePoints: 0
+  damagePoints: 5
+  unitSpeed: 2
   skills: Shoot

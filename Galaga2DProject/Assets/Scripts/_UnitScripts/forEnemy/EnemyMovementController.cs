@@ -38,10 +38,10 @@ public class EnemyMovementController : MonoBehaviour, IMovementManager
         time2Move += Time.deltaTime;
         if(time2Move >= 10f) isMoving = true;
         if (((transform.position.x - thePlayer.transform.position.x) <= maxDistance) && (isMoving))
-            UnitMovementComputations();
+            UnitMovementComputations(speed);
     }
 
-    public void UnitMovementComputations(){
+    public void UnitMovementComputations(float moveSpeed){
         transform.position = Vector3.MoveTowards(transform.position, thePlayer.transform.position, speed * Time.deltaTime);
     }
 

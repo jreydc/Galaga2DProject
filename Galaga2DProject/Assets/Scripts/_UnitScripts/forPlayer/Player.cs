@@ -36,6 +36,6 @@ public class Player : MonoBehaviour
     }
 
     private void FixedUpdate() {
-        playerMovementController.UnitMovementComputations();
+        playerMovementController.UnitMovementComputations(playerAttributes.unitSpeed);
     }
 }
