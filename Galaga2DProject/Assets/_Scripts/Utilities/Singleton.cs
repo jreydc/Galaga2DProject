@@ -25,4 +25,9 @@ public class Singleton<T> : MonoBehaviour where T : Singleton<T>
         }
 
     }
+
+    protected virtual void OnApplicationQuit() {
+        _instance = null;
+        Destroy(gameObject);
+    }
 }
