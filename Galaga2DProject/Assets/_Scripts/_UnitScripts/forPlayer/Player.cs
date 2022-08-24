@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(CapsuleCollider2D))]
-public class Player : MonoBehaviour
+public class Player : UnitBase
 {
     public System.Action killed;
     private UnitAnimator unitAnim82r;
@@ -36,6 +36,6 @@ public class Player : MonoBehaviour
     }
 
     private void FixedUpdate() {
-        playerMovementController.UnitMovementComputations(playerAttributes.unitSpeed);
+        playerMovementController.UnitMovementComputations(playerAttributes.BaseStats.speed);
     }
 }

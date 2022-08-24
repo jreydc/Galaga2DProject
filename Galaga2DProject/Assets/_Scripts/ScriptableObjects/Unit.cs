@@ -7,7 +7,7 @@ public class Unit : ScriptableObject {
     
     public UnitStats BaseStats => _stats;
 
-    public 
+    public UnitBase prefab;
     
     /* public float maxHealthPoints;  
     public float currentHealthPoints;
