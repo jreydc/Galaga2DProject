@@ -5,7 +5,6 @@ using UnityEngine;
 [RequireComponent(typeof(CapsuleCollider2D))]
 public class Player : UnitBase
 {
-
     private PlayerMovementController playerMovementController;
     private PlayerAttackController playerAttackController;
     [SerializeField]private Unit playerAttributes;
@@ -40,7 +39,7 @@ public class Player : UnitBase
         }
 
         if(playerAttackController.IsAttacking && playerAttackController.GetAttackDelay == 0f){
-            playerAttackController.Shoot();
+            playerAttackController.Shoot(playerAttributes._projectile);
             Debug.Log("Shooting");
         }
 
