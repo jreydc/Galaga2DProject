@@ -4,12 +4,13 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(CapsuleCollider2D))]
-public class Player : Unit
+public class Player : MonoBehaviour
 {
     public System.Action killed;
     private UnitAnimator unitAnim82r;
     private PlayerMovementController playerMovementController;
     private PlayerAttackController playerAttackController;
+    [SerializeField]private Unit playerAttributes;
 
     private void Awake()
     {

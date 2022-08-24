@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(BoxCollider2D))]
-public class Enemy : Unit
-{
+public class Enemy : MonoBehaviour { 
     public System.Action<Enemy> killed;
     private UnitAnimator unitAnim82r;
     private EnemyMovementController enemyMovementController;
+    [SerializeField]private Unit enemyAttributes;
     
     [SerializeField]private float time2Attack;
     private bool moveTowardsDPlayer;
