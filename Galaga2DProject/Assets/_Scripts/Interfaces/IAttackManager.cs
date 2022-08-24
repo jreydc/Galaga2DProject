@@ -1,4 +1,4 @@
 ﻿public interface IAttackManager
 {
-    void Shoot();
+    void Shoot(Projectile projectile);
 }

@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b435881410492a94e84e96aba2232ddf, type: 3}
   m_Name: InvaderData
   m_EditorClassIdentifier: 
-  maxHealthPoints: 30
-  currentHealthPoints: 0
-  maxLifePoints: 1
-  currentLifePoints: 0
-  damagePoints: 5
-  unitSpeed: 2
-  skills: Shoot
+  _faction: 1
+  _stats:
+    health: 30
+    attackPower: 5
+    speed: 2
+  unitPrefab: {fileID: 6105277708553674472, guid: 401d8aca9e846254890399f66cd7de66,
+    type: 3}
+  _projectile: {fileID: 7836184787500661791, guid: 72503dc6ac2f67f4e9009a2e91d18f3f,
+    type: 3}
