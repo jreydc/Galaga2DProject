@@ -6,6 +6,7 @@
 public class UnitBase : MonoBehaviour
 {
     public System.Action IsKilled;
+    public System.Action IsHit;
     public UnitAnimator unitAnim82r;
     public UnitStats Stats { get; private set; }
 

@@ -7,11 +7,11 @@ public abstract class Projectile : MonoBehaviour, ICollisionManager
 {
     [SerializeField]public float projectileSpeed;
     public Vector3 direction = Vector3.up;
-    public System.Action<Projectile> destroyed;
+    public System.Action<Projectile> IsDestroyed;
 
     public virtual void OnDestroy() {
-        if(destroyed != null){
-            destroyed.Invoke(this);
+        if(IsDestroyed != null){
+            IsDestroyed?.Invoke(this);
         }
     }    
 
