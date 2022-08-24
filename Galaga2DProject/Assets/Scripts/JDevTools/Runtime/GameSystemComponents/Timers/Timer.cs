@@ -1,4 +1,13 @@
-﻿using System;
+﻿/* 
+<summary>
+Referenced from the Dapper Dino YT Channel
+
+Game Architecture Tips - Unity
+https://www.youtube.com/watch?v=pRjTM3pzqDw
+</summary>
+ */
+
+using System;
 
 namespace JDevTools.Runtime.GameSystemComponents.Timers{
     public class Timer
