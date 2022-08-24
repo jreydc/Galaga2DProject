@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(BoxCollider2D))]
-public class Enemy : MonoBehaviour { 
-    public System.Action<Enemy> killed;
-    private UnitAnimator unitAnim82r;
+public class Enemy : UnitBase { 
     private EnemyMovementController enemyMovementController;
     [SerializeField]private Unit enemyAttributes;
     
@@ -18,8 +16,7 @@ public class Enemy : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start()
-    {
-        unitAnim82r = transform.GetChild(0).gameObject.GetComponent<UnitAnimator>();
+    {        
         enemyMovementController = GetComponent<EnemyMovementController>();
         projectileSpawner = transform.GetChild(3).gameObject.transform;
     }
@@ -44,7 +41,7 @@ public class Enemy : MonoBehaviour {
         }
 
         if(killed != null){
-            killed?.Invoke(this);
+            killed?.Invoke();
         }
     }
 
