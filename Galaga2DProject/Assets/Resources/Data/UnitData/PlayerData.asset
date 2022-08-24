@@ -12,10 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b435881410492a94e84e96aba2232ddf, type: 3}
   m_Name: PlayerData
   m_EditorClassIdentifier: 
-  maxHealthPoints: 100
-  currentHealthPoints: 0
-  maxLifePoints: 3
-  currentLifePoints: 0
-  damagePoints: 10
-  unitSpeed: 4
-  skills: Shoot
+  _faction: 0
+  _stats:
+    health: 100
+    attackPower: 10
+    speed: 3
+  prefab: {fileID: 9126670360383927670, guid: 2ce1fb9d977e03b49a1ce0113faf945e, type: 3}
