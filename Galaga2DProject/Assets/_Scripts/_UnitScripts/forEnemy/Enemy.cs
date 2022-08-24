@@ -20,7 +20,7 @@ public class Enemy : UnitBase {
         enemyMovementController = GetComponent<EnemyMovementController>();
         projectileSpawner = transform.GetChild(3).gameObject.transform;
         IsKilled += () => {
-            gameObject.SetActive(false);
+            //call here the 
         };
     }
 
