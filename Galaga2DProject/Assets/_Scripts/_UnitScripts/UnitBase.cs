@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class UnitBase : MonoBehaviour
 {
+    public System.Action killed;
+    public UnitAnimator unitAnim82r;
     public UnitStats Stats { get; private set; }
+
+    public virtual void Awake() => unitAnim82r.GetComponent<UnitAnimator>();
     public virtual void SetStats(UnitStats stats) => Stats = stats;
 
     public virtual void TakeDamage(int dmg) {

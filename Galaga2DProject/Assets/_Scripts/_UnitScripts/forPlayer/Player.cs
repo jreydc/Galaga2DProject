@@ -5,17 +5,28 @@ using UnityEngine;
 [RequireComponent(typeof(CapsuleCollider2D))]
 public class Player : UnitBase
 {
-    public System.Action killed;
-    private UnitAnimator unitAnim82r;
+
     private PlayerMovementController playerMovementController;
     private PlayerAttackController playerAttackController;
     [SerializeField]private Unit playerAttributes;
 
-    private void Awake()
+    private bool _canMove;
+
+    public override void Awake()
     {
+        base.Awake();
         playerMovementController = GetComponent<PlayerMovementController>();
         playerAttackController = GetComponent<PlayerAttackController>();
-        unitAnim82r = transform.GetChild(0).gameObject.GetComponent<UnitAnimator>();
+        //unitAnim82r = transform.GetChild(0).gameObject.GetComponent<UnitAnimator>();
+        SetStats(playerAttributes.BaseStats);
+
+        GameManager.OnBeforeStateChanged += OnStateChanged;
+    }
+
+    private void OnDestroy() => GameManager.OnBeforeStateChanged -= OnStateChanged;
+
+    private void OnStateChanged(GameState newState) {
+        if (newState == GameState.BATTLE) _canMove = true;
     }
 
     // Update is called once per frame
@@ -36,6 +47,6 @@ public class Player : UnitBase
     }
 
     private void FixedUpdate() {
-        playerMovementController.UnitMovementComputations(playerAttributes.BaseStats.speed);
+        playerMovementController.UnitMovementComputations(Stats.speed);
     }
 }
