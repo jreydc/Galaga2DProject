@@ -6,11 +6,11 @@ using UnityEngine;
 /// One repository for all scriptable objects. Create your query methods here to keep your business logic clean.
 /// </summary>
 
-public class ResourceSystem : StaticInstance<ResourceSystem>
+public class ResourceSystem : MonoBehaviour
 {
-    private UnitBase unit;
+/*     private UnitBase unit;
     public UnitBase[] units { get; private set; }
-    private Dictionary<Faction, UnitBase> _unitDict;
+    [SerializeField]private Dictionary<Faction, UnitBase> _unitDict;
 
     protected void Start() {
         AssembleResources();
@@ -18,7 +18,7 @@ public class ResourceSystem : StaticInstance<ResourceSystem>
 
     private void AssembleResources() {
         units = Resources.LoadAll<UnitBase>("Prefabs/ships");
-        //_unitDict = units.ToDictionary(r => r.Faction, r => r);
+        //_unitDict.Add();
         foreach(var t in units){
             Debug.Log(t.name);
         }
@@ -26,5 +26,5 @@ public class ResourceSystem : StaticInstance<ResourceSystem>
     }
 
     public UnitBase GetUnit(Faction t) => _unitDict[t];
-    public UnitBase GetRandomHero() => units[Random.Range(0, units.Length)];
+    public UnitBase GetRandomHero() => units[Random.Range(0, units.Length)]; */
 }

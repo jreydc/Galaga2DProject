@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectPooler : MonoBehaviour
+public class ObjectPooler : Singleton<ObjectPooler>
 {
     [System.Serializable]
     public class Pool
@@ -13,7 +13,7 @@ public class ObjectPooler : MonoBehaviour
     }
 
     public List<Pool> pools;
-    //public Dictionary<string, Queue<GameObject>> poolDictionary => new Dictionary<string, Queue<GameObject>>();
+    public Dictionary<string, Queue<GameObject>> poolDictionary => new Dictionary<string, Queue<GameObject>>();
     private Queue<GameObject> collectionOfPools = new Queue<GameObject>();
 
     public void FillThePoolCollection()

@@ -2,28 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class StaticInstance<T> : MonoBehaviour where T : MonoBehaviour {
-    public static T _instance;
+public class Singleton<T> : MonoBehaviour where T : Singleton<T>
+{
+    private static T _instance;
     public static T _SingleInstance{ 
         get { return _instance; }
         private set{}
     }
-    protected virtual void Awake() => _instance = this as T;
-
-    protected virtual void OnApplicationQuit() {
-        _instance = null;
-        Destroy(gameObject);
-    }
-}
-
-public class Singleton<T> : StaticInstance<T> where T : Singleton<T>
-{
-    protected override void Awake()
+    public virtual void Awake()
     {
         if (_instance == null)
         {
             Debug.Log(typeof(T).ToString() + " is NULL.");
-            base.Awake();
+            _instance = this as T;
             DontDestroyOnLoad(gameObject);
         }
         else
@@ -33,5 +24,8 @@ public class Singleton<T> : StaticInstance<T> where T : Singleton<T>
         }
 
     }
-
+    protected virtual void OnApplicationQuit() {
+        _instance = null;
+        Destroy(gameObject);
+    }
 }
