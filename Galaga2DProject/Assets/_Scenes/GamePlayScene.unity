@@ -851,6 +851,14 @@ MonoBehaviour:
   - tag: Invaders
     prefab: {fileID: 1512782934554904, guid: 401d8aca9e846254890399f66cd7de66, type: 3}
     size: 5
+  - tag: PlayerProjectile
+    prefab: {fileID: 6645701168954957982, guid: d3caec5cc91d10e4f94e73dc27bc85e8,
+      type: 3}
+    size: 20
+  - tag: EnemyProjectile
+    prefab: {fileID: 1876748203980267326, guid: 72503dc6ac2f67f4e9009a2e91d18f3f,
+      type: 3}
+    size: 20
 --- !u!1 &1847737574788627114
 GameObject:
   m_ObjectHideFlags: 0
