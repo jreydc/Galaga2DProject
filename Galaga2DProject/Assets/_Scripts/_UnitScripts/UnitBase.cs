@@ -9,8 +9,8 @@ public class UnitBase : MonoBehaviour
     public System.Action IsHit;
     public UnitAnimator unitAnim82r;
     public UnitStats Stats { 
-        get {return Stats;} 
-        private set{}
+        get;
+        private set;
     }
 
     public virtual void Awake() => unitAnim82r = transform.GetChild(0).gameObject.GetComponent<UnitAnimator>();

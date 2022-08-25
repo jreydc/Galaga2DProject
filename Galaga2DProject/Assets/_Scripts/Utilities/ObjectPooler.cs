@@ -26,7 +26,6 @@ public class ObjectPooler : Singleton<ObjectPooler>
                 obj.SetActive(false);
                 collectionOfPools.Enqueue(obj); 
             }
-
         }
     }
 

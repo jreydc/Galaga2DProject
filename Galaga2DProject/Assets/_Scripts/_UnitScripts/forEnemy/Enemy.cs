@@ -59,7 +59,8 @@ public class Enemy : UnitBase {
 
 
     private void Shoot(){
-        Instantiate(projectile, projectileSpawner.position, Quaternion.identity);
+        //Instantiate(projectile, projectileSpawner.position, Quaternion.identity);
+        ObjectPooler._SingleInstance.SpawnFromPool(projectileSpawner.position, Quaternion.identity);
         SoundFXManager._SingleInstance.InvaderShootingSFXPlay();
     }
 }
