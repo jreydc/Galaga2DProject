@@ -43,7 +43,7 @@ public class Enemy : UnitBase {
         if(time2Attack >= 0.5f){
             Shoot();
             time2Attack = 0f;
-            IsKilled?.Invoke();
+            //IsKilled?.Invoke();
         }
 
 /*         if(killed != null){
