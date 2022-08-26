@@ -58,11 +58,13 @@ public class ObjectPooler : Singleton<ObjectPooler>
         objectToSpawn.transform.position = position;
         objectToSpawn.transform.rotation = rotation;
 
+        poolDictionary[tag].Enqueue(objectToSpawn);
+
         return objectToSpawn;
     }
 
     public void ReturnToPool(GameObject obj){
-        poolDictionary[obj.tag].Enqueue(obj);
+        //poolDictionary[tag].Enqueue(obj);
         obj.SetActive(false);
     }
 }
