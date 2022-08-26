@@ -40,7 +40,6 @@ public class Player : UnitBase
 
         if(playerAttackController.IsAttacking && playerAttackController.GetAttackDelay == 0f){
             playerAttackController.Shoot(playerAttributes._projectile);
-            Debug.Log("Shooting");
         }
 
     }

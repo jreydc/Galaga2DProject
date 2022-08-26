@@ -52,7 +52,6 @@ public class ObjectPooler : Singleton<ObjectPooler>
     }
 
     public void ReturnToPool(GameObject obj){
-        //poolDictionary[tag].Enqueue(obj);
         obj.SetActive(false);
     }
 }

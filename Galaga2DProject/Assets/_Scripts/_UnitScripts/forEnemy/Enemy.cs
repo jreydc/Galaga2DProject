@@ -40,7 +40,7 @@ public class Enemy : UnitBase {
         }
 
         time2Attack += Time.deltaTime;
-        if(time2Attack >= 0.5f){
+        if(time2Attack >= 10f){
             Shoot();
             time2Attack = 0f;
             //IsKilled?.Invoke();

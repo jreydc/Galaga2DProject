@@ -27,6 +27,7 @@ public abstract class Projectile : MonoBehaviour, ICollisionManager
     public virtual void CheckCollision(Collider2D other) {
         //Debug.Log("Detected!" + other);
         //Destroy(gameObject);
+        ObjectPooler._SingleInstance.ReturnToPool(other.gameObject);
         ObjectPooler._SingleInstance.ReturnToPool(gameObject);
     }
 

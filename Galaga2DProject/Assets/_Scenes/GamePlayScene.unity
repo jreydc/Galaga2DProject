@@ -387,7 +387,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4193583667243190, guid: 401d8aca9e846254890399f66cd7de66, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4193583667243190, guid: 401d8aca9e846254890399f66cd7de66, type: 3}
       propertyPath: m_LocalScale.x
@@ -641,7 +641,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4803365131872970, guid: 2ce1fb9d977e03b49a1ce0113faf945e, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4803365131872970, guid: 2ce1fb9d977e03b49a1ce0113faf945e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1087,6 +1087,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 464063271542217698, guid: b5c91bbf889be2f4fadf8b8e9125327b,
+        type: 3}
+      propertyPath: maxPosition
+      value: 2.2
+      objectReference: {fileID: 0}
     - target: {fileID: 464063271542217700, guid: b5c91bbf889be2f4fadf8b8e9125327b,
         type: 3}
       propertyPath: m_Name
@@ -1095,7 +1100,7 @@ PrefabInstance:
     - target: {fileID: 464063271542217701, guid: b5c91bbf889be2f4fadf8b8e9125327b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 464063271542217701, guid: b5c91bbf889be2f4fadf8b8e9125327b,
         type: 3}
@@ -1105,7 +1110,7 @@ PrefabInstance:
     - target: {fileID: 464063271542217701, guid: b5c91bbf889be2f4fadf8b8e9125327b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 464063271542217701, guid: b5c91bbf889be2f4fadf8b8e9125327b,
         type: 3}
@@ -1172,7 +1177,7 @@ MonoBehaviour:
     size: 100
   - tag: Invaders
     prefab: {fileID: 1512782934554904, guid: 401d8aca9e846254890399f66cd7de66, type: 3}
-    size: 5
+    size: 7
 --- !u!1 &1847737574788627114
 GameObject:
   m_ObjectHideFlags: 0
