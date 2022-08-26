@@ -30,7 +30,7 @@ public class BattleSystem : MonoBehaviour
     void Start()
     {
         //_enemyObjectPooler = GetComponent<ObjectPooler>();
-        ObjectPooler._objectPoolerInstance.FillThePoolCollection();
+        ObjectPooler._SingleInstance.FillThePoolCollection();
         InvokeRepeating("StartBattle", 0, 3);
     }
 
