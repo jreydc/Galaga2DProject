@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectPooler : MonoBehaviour
+public class ObjectPooler : Singleton<ObjectPooler>
 {
     [System.Serializable]
     public class Pool
@@ -14,16 +14,6 @@ public class ObjectPooler : MonoBehaviour
 
     public List<Pool> pools;
     public Dictionary<string, Queue<GameObject>> poolDictionary;
-
-    #region Single Instance
-    public static ObjectPooler _objectPoolerInstance;
-
-    private void Awake()
-    {
-        _objectPoolerInstance = this;
-    }
-
-    #endregion
 
     public void FillThePoolCollection()
     {
@@ -38,7 +28,7 @@ public class ObjectPooler : MonoBehaviour
                 obj.SetActive(false);
                 objectPool.Enqueue(obj);
             }
-            poolDictionary.Add(tag, objectPool);
+            poolDictionary.Add(pool.tag, objectPool);
         }
         
     }
@@ -68,13 +58,11 @@ public class ObjectPooler : MonoBehaviour
         objectToSpawn.transform.position = position;
         objectToSpawn.transform.rotation = rotation;
 
-        poolDictionary[tag].Enqueue(objectToSpawn);
-
         return objectToSpawn;
     }
 
     public void ReturnToPool(GameObject obj){
-        //collectionOfPools.Enqueue(obj);
+        poolDictionary[obj.tag].Enqueue(obj);
         obj.SetActive(false);
     }
 }
