@@ -24,14 +24,13 @@ public class BattleSystem : MonoBehaviour
         5. UI Managers that handles the UIs, menus and buttons of the games interfaces.
      */
      
-    [SerializeField]private ObjectPooler _enemyObjectPooler;
     [SerializeField]private float maxPosition;
     // Start is called before the first frame update
     void Start()
     {
         //_enemyObjectPooler = GetComponent<ObjectPooler>();
         ObjectPooler._SingleInstance.FillThePoolCollection();
-        InvokeRepeating("StartBattle", 0, 3);
+        InvokeRepeating("SpawnWaveOfEnemies", 0, 5);
     }
 
     void Update()
@@ -39,7 +38,7 @@ public class BattleSystem : MonoBehaviour
         
     }
 
-    private void StartBattle(){
+    private void SpawnWaveOfEnemies(){
         Vector3 enemyPosition = new Vector3(Random.Range(-maxPosition, maxPosition), transform.position.y, transform.position.z);
         ObjectPooler._SingleInstance.GetObjectFromPool("Invaders",enemyPosition, Quaternion.identity);
     }
