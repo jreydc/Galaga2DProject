@@ -33,18 +33,6 @@ public class ObjectPooler : Singleton<ObjectPooler>
         
     }
 
-    public GameObject SpawnFromPool(Vector3 position, Quaternion rotation)
-    {
-        /* if (collectionOfPools.Count > 0){
-            GameObject objectToSpawn = collectionOfPools.Dequeue();
-            objectToSpawn.transform.position = position;
-            objectToSpawn.transform.rotation = rotation;
-            objectToSpawn.SetActive(true);
-            return objectToSpawn;
-        } */
-        return null;
-    }
-
     public GameObject GetObjectFromPool(string tag, Vector3 position, Quaternion rotation){
         if (!poolDictionary.ContainsKey(tag))
         {

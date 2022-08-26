@@ -13,8 +13,8 @@ public class PlayerProjectile : Projectile
                 The lines of code below should be included in an event to know the Enemy is killed, synchronously connected also to the Health System.
              */
             
-            Destroy(other.gameObject);
-            
+            //Destroy(other.gameObject);
+            ObjectPooler._SingleInstance.ReturnToPool(other.gameObject);
             SoundFXManager._SingleInstance.InvaderExplosionSFXPlay();
             VFXManager._SingleInstance.InvaderVFXExplosionPlay(other.gameObject.transform.position);
         }
