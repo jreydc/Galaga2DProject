@@ -38,7 +38,7 @@ public class Enemy : UnitBase {
         }
 
         time2Attack += Time.deltaTime;
-        if(time2Attack >= 10f){
+        if(time2Attack >= 2f){
             Shoot();
             time2Attack = 0f;
             //IsKilled?.Invoke();
@@ -58,7 +58,7 @@ public class Enemy : UnitBase {
 
     private void Shoot(){
         //Instantiate(projectile, projectileSpawner.position, Quaternion.identity);
-        ObjectPooler._SingleInstance.GetObjectFromPool("EnemyProjectile", projectileSpawner.position, Quaternion.identity);
+        ObjectPooler._SingleInstance.GetObjectFromPool("EnemyProjectile", projectileSpawner.position);
         SoundFXManager._SingleInstance.InvaderShootingSFXPlay();
     }
 }

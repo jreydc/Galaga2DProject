@@ -8,6 +8,7 @@ public class PlayerProjectile : Projectile
     public override void CheckCollision(Collider2D other)
     {
         if (other.tag == "Enemy"){
+            ObjectPooler._SingleInstance.ReturnToPool(other.gameObject);
             SoundFXManager._SingleInstance.InvaderExplosionSFXPlay();
             VFXManager._SingleInstance.InvaderVFXExplosionPlay(other.gameObject.transform.position);
         }
