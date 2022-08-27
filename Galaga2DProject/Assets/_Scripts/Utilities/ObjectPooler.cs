@@ -43,8 +43,9 @@ public class ObjectPooler : Singleton<ObjectPooler>
         GameObject objectToSpawn = poolDictionary[tag].Dequeue();
 
         objectToSpawn.SetActive(true);
-        objectToSpawn.transform.position = position;
-        objectToSpawn.transform.rotation = rotation;
+        objectToSpawn.transform.localPosition = position;
+        objectToSpawn.transform.localScale = Vector3.one;
+        //objectToSpawn.transform.rotation = rotation;
 
         poolDictionary[tag].Enqueue(objectToSpawn);
 
