@@ -40,7 +40,7 @@ public class BattleSystem : MonoBehaviour
     {
         //_enemyObjectPooler = GetComponent<ObjectPooler>();
         ObjectPooler._SingleInstance.FillThePoolCollection();
-        //InvokeRepeating("SpawnWaveOfEnemies", 0, 5);
+        InvokeRepeating("SpawnWaveOfEnemies", 0, 5);
         SpawnWaveOfEnemies();
         Debug.Log(screen);
 
@@ -52,7 +52,7 @@ public class BattleSystem : MonoBehaviour
     }
 
     private void SpawnWaveOfEnemies(){
-        Vector3 enemyPosition = new Vector3(Random.Range(-maxPosition, maxPosition), enemySpawnPoint.localPosition.y, enemySpawnPoint.localPosition.z);
-        ObjectPooler._SingleInstance.GetObjectFromPool("Invaders",enemyPosition, Quaternion.identity);
+        //Vector3 enemyPosition = new Vector3(Random.Range(-maxPosition, maxPosition), enemySpawnPoint.localPosition.y, enemySpawnPoint.localPosition.z);
+        ObjectPooler._SingleInstance.GetObjectFromPool("Invaders",enemySpawnPoint.localPosition);
     }
 }

@@ -24,7 +24,7 @@ public class ObjectPooler : Singleton<ObjectPooler>
             for (int i = 0; i < pool.size; i++)
             {
                 
-                GameObject obj = Instantiate(pool.prefab, transform.position, Quaternion.identity);
+                GameObject obj = Instantiate(pool.prefab);
                 obj.SetActive(false);
                 objectPool.Enqueue(obj);
             }
@@ -33,7 +33,7 @@ public class ObjectPooler : Singleton<ObjectPooler>
         
     }
 
-    public GameObject GetObjectFromPool(string tag, Vector3 position, Quaternion rotation){
+    public GameObject GetObjectFromPool(string tag, Vector3 position){
         if (!poolDictionary.ContainsKey(tag))
         {
             Debug.LogWarning("Pool doesn't exist - " + tag);

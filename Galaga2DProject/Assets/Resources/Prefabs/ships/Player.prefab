@@ -287,7 +287,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.01, y: 0.7}
+  m_Size: {x: 1, y: 0.7}
   m_Direction: 1
 --- !u!114 &9126670360383927670
 MonoBehaviour:
@@ -301,6 +301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 318df9c9da81fce4996c9568ce283715, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unitAnim82r: {fileID: 0}
   playerAttributes: {fileID: 11400000, guid: 2c15b2b3e57738a43a0e7074b81b4e29, type: 2}
 --- !u!114 &4272945167486820458
 MonoBehaviour:
