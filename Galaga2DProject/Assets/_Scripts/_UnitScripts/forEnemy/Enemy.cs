@@ -6,13 +6,11 @@ using UnityEngine;
 public class Enemy : UnitBase { 
     private EnemyMovementController enemyMovementController;
     [SerializeField]private Unit enemyAttributes;
-    
     [SerializeField]private float time2Attack;
     private bool moveTowardsDPlayer;
 
     //Initializations for Projectiles
     [SerializeField]private Transform projectileSpawner;
-    [SerializeField]private GameObject projectile;
 
     // Start is called before the first frame update
     void Start()

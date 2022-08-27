@@ -24,13 +24,26 @@ public class BattleSystem : MonoBehaviour
         5. UI Managers that handles the UIs, menus and buttons of the games interfaces.
      */
      
+    [SerializeField]private Transform enemySpawnPoint;
+    [SerializeField]private Transform enemyStayPoint;
     [SerializeField]private float maxPosition;
-    // Start is called before the first frame update
+    private int gridRows => 4;
+    private int gridColumns => ObjectPooler._SingleInstance.pools[2].size;// population of the Invaders
+    private float screen => Screen.width;
+
+    private void Awake() {
+    
+    }
+
+
     void Start()
     {
         //_enemyObjectPooler = GetComponent<ObjectPooler>();
         ObjectPooler._SingleInstance.FillThePoolCollection();
-        InvokeRepeating("SpawnWaveOfEnemies", 0, 5);
+        //InvokeRepeating("SpawnWaveOfEnemies", 0, 5);
+        SpawnWaveOfEnemies();
+        Debug.Log(screen);
+
     }
 
     void Update()
@@ -39,7 +52,7 @@ public class BattleSystem : MonoBehaviour
     }
 
     private void SpawnWaveOfEnemies(){
-        Vector3 enemyPosition = new Vector3(Random.Range(-maxPosition, maxPosition), transform.position.y, transform.position.z);
+        Vector3 enemyPosition = new Vector3(Random.Range(-maxPosition, maxPosition), enemySpawnPoint.localPosition.y, enemySpawnPoint.localPosition.z);
         ObjectPooler._SingleInstance.GetObjectFromPool("Invaders",enemyPosition, Quaternion.identity);
     }
 }
